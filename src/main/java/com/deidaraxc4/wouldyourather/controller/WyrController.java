@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 public class WyrController {
@@ -15,10 +18,30 @@ public class WyrController {
     WyrService wyrService;
 
     @RequestMapping(value = "/questions", method = RequestMethod.GET)
-    public List<WyrQuestion> findWyrQuestions() {
+    public List<WyrQuestion> findAllWyrQuestions() {
 	List<WyrQuestion> wyrQuestions = (List<WyrQuestion>) wyrService.findAll();
 
 	return wyrQuestions;
+    }
+
+    @RequestMapping(value = "/question/{questionId}", method = RequestMethod.GET)
+    public WyrQuestion findOneWyrQuestion(@PathVariable Long questionId) {
+	return wyrService.findById(questionId);
+    }
+
+    @RequestMapping(value = "/questions", method = RequestMethod.POST)
+    public WyrQuestion createWyrQuestion(@RequestBody WyrQuestion wyrQuestion) {
+	return wyrService.save(wyrQuestion);
+    }
+
+    @RequestMapping(value = "question/{questionId}", method = RequestMethod.DELETE)
+    public void deleteWyrQuestionById(@PathVariable Long questionId) {
+	wyrService.deleteById(questionId);
+    }
+
+    @RequestMapping(value = "question/{questionId}", method = RequestMethod.PUT)
+    public WyrQuestion voteWyrQuestion(@PathVariable Long questionId, @RequestParam(name="id",required=true) int id) {
+	return wyrService.vote(wyrService.findById(questionId),id);
     }
 
 }
