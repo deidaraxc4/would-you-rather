@@ -1,0 +1,7 @@
+<div class="wyr-box">
+  <button mat-stroked-button [disabled]="isVoted" (click)="toggleVoted()">choice 1</button>
+  <p *ngIf="isVoted">you see me after you vote, show vote amount here</p>
+  <h4>Would you rather</h4>
+  <button mat-stroked-button [disabled]="isVoted" (click)="toggleVoted()">choice 2</button>
+  <p *ngIf="isVoted">you see me after you vote, show vote amount here</p>
+</div>

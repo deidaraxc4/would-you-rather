@@ -1,0 +1,12 @@
+.wyr-box h4 {
+    display: inline-block;
+    padding: 20px;
+}
+
+.wyr-box button {
+    display: inline-block;
+}
+
+.wyr-box p {
+    display: inline-block;
+}
