@@ -11,13 +11,17 @@ import { PollComponent } from './poll/poll.component';
 import { HomeComponent } from './home/home.component';
 import { CreateQuestionComponent } from './create-question/create-question.component';
 import { FormsModule } from '@angular/forms';
+import { VoteQuestionComponent } from './vote-question/vote-question.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PollComponent,
     HomeComponent,
-    CreateQuestionComponent
+    CreateQuestionComponent,
+    VoteQuestionComponent,
+    PageNotFoundComponent
   ],
   imports: [
     AppRoutingModule,

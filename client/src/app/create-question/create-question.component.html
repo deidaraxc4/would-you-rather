@@ -1,5 +1,5 @@
 <h1>Create a question</h1>
-
+<a routerLink="/home">Home</a>
 <form #form="ngForm" class="example-form" (ngSubmit)="submit(form.value)">
   <mat-form-field class="example-full-width">
     <input matInput placeholder="Would you rather" type="text" name="choice_a" ngModel>
@@ -10,5 +10,3 @@
   </mat-form-field>
   <button mat-raised-button type="submit">Submit</button>
 </form>
-
-<a routerLink="home">Home</a>
