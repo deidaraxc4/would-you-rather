@@ -13,6 +13,7 @@ import { CreateQuestionComponent } from './create-question/create-question.compo
 import { FormsModule } from '@angular/forms';
 import { VoteQuestionComponent } from './vote-question/vote-question.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatButtonModule,
     MatToolbarModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

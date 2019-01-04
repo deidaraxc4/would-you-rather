@@ -1,12 +1,13 @@
 <h1>Create a question</h1>
 <a routerLink="/home">Home</a>
-<form #form="ngForm" class="example-form" (ngSubmit)="submit(form.value)">
+<form #form="ngForm" class="example-form" (ngSubmit)="submit(form.value,form)">
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Would you rather" type="text" name="choice_a" ngModel>
+    <input matInput placeholder="Would you rather" type="text" name="choice_a_text" ngModel>
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Or ..." type="text" name="choice_b" ngModel>
+    <input matInput placeholder="Or ..." type="text" name="choice_b_text" ngModel>
   </mat-form-field>
   <button mat-raised-button type="submit">Submit</button>
 </form>
+<p *ngIf="isSubmitted">Question Submitted!</p>

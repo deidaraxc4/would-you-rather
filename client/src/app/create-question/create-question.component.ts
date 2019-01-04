@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-create-question',
@@ -6,14 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-question.component.css']
 })
 export class CreateQuestionComponent implements OnInit {
+  isSubmitted : boolean = false;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
   }
 
-  submit(value: any) {
+  submit(value: any, form: NgForm) {
     console.log(value);
+    this.isSubmitted = !this.isSubmitted;
+    this.http.post('http://localhost:7050/api/questions',value)
+    .subscribe((response) => {
+      console.log(response);
+    });
+    form.resetForm();
   }
 
 }
