@@ -1,7 +1,7 @@
 <div class="wyr-box">
-  <button mat-stroked-button [disabled]="isVoted" (click)="toggleVoted()">{{question.choice_a_text}}</button>
+  <button mat-stroked-button [disabled]="isVoted" (click)="toggleVotedA()">{{question.choice_a_text}}</button>
   <p *ngIf="isVoted">{{question.choice_a_votes}}</p>
   <h4>Would you rather</h4>
-  <button mat-stroked-button [disabled]="isVoted" (click)="toggleVoted()">{{question.choice_b_text}}</button>
+  <button mat-stroked-button [disabled]="isVoted" (click)="toggleVotedB()">{{question.choice_b_text}}</button>
   <p *ngIf="isVoted">{{question.choice_b_votes}}</p>
 </div>

@@ -19,6 +19,7 @@ export class VoteQuestionComponent implements OnInit {
     this.http.get<Array<Question>>('http://localhost:7050/api/questions')
     .subscribe((response) => {
       this.questionArray = response;
+      console.log(this.questionArray)
     });
 
   }
