@@ -17,4 +17,4 @@ mvn clean package
 java -jar target/would-you-rather-{version}.jar
 ```
 
-The default port the API is running on is 7005 with context path of "/api"
+The default port the API is running on is 7050 with context path of "/api"
