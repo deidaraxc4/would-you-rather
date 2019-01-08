@@ -21,6 +21,6 @@ The default port the API is running on is 7050 with context path of "/api"
 
 
 ### The application
-[[https://github.com/deidaraxc4/would-you-rather/blob/master/images/1.png]]
-[[https://github.com/deidaraxc4/would-you-rather/blob/master/images/2.png]]
-[[https://github.com/deidaraxc4/would-you-rather/blob/master/images/3.png]]
+![home page](https://github.com/deidaraxc4/would-you-rather/blob/master/images/1.png)
+![create a question](https://github.com/deidaraxc4/would-you-rather/blob/master/images/2.png)
+![vote on questions](https://github.com/deidaraxc4/would-you-rather/blob/master/images/3.png)
